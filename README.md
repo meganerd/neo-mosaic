@@ -2,33 +2,52 @@
 
 > NCSA Mosaic-inspired retro browser theme for Firefox and Chrome/Chromium.
 
-Brings back the look and feel of the original NCSA Mosaic web browser — the first graphical browser that brought the web to the masses in 1993. Features the classic Mosaic logo and the original grey/blue color palette.
+Brings back the look and feel of the original NCSA Mosaic web browser — the first graphical browser that brought the web to the masses in 1993. Features the classic geometric diamond logo in rust, teal, yellow-green, and gold, set against the original Motif/Windows 3.1 grey chrome.
 
 ![NCSA Mosaic Logo](shared/mosaic-logo.png)
 
 ## Structure
 
 ```
-mosaic-browser-theme/
-├── firefox/       # Firefox static theme
-├── chrome/        # Chrome/Chromium theme
-├── shared/        # Shared assets (logo, reference images)
+neo-mosaic/
+├── firefox/       # Firefox static theme (manifest v2)
+│   ├── manifest.json
+│   ├── mosaic-header.png
+│   ├── icon-*.png
+│   └── README.md
+├── chrome/        # Chrome/Chromium theme (manifest v3)
+│   ├── manifest.json
+│   ├── mosaic-header.png
+│   ├── icon-*.png
+│   └── README.md
+├── shared/        # Shared SVG/PNG assets
 └── README.md
 ```
 
-## Firefox
+## Themes
 
-1. Open `about:addons`
-2. Click the gear icon → "Install Add-on From File..."
-3. Select `firefox/mosaic-theme.zip`
-4. Or: open `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on" → select any file in `firefox/`
+| Browser | Type | Install |
+|---------|------|---------|
+| Firefox | Static theme | `about:addons` → Install from file → `firefox/manifest.json` |
+| Chrome | Manifest V3 theme | `chrome://extensions/` → Load unpacked → `chrome/` |
 
-## Chrome / Chromium
+## Color Palette
 
-1. Open `chrome://extensions/`
-2. Enable "Developer mode"
-3. Click "Load unpacked"
-4. Select the `chrome/` directory
+The theme recreates the classic 1993 browser chrome:
+
+| Shade | Color | Role |
+|-------|-------|------|
+| `#C0C0C0` | Motif grey | Window frame, toolbars, sidebars |
+| `#D4D4D4` | Light grey | Selected tabs, hover states |
+| `#A8A8A8` | Dark grey | Inactive frames |
+| `#808080` | Shadow grey | Borders, separators |
+| `#FFFFFF` | White | URL/omnibox fields |
+| `#000000` | Black | Text |
+| `#000080` | Navy | Links, bookmarks, highlights |
+| `#B84B16` | Rust | Logo diamond |
+| `#005953` | Dark teal | Logo diamond |
+| `#B2BB1E` | Yellow-green | Logo diamond |
+| `#C5A901` | Gold | Logo diamond |
 
 ## License
 

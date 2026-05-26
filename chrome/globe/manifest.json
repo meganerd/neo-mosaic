@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "neo-mosaic (Globe)",
+  "version": "1.0.0",
+  "author": "Gustin Johnson",
+  "homepage_url": "https://gitlab.zarquon.space/meganerd/neo-mosaic",
+  "description": "NCSA Mosaic-inspired retro theme (spinning globe variant). Classic 1993 grey chrome with the iconic animated globe throbber logo.",
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "mosaic-header.png"
+    },
+    "colors": {
+      "frame": [192, 192, 192],
+      "frame_inactive": [168, 168, 168],
+      "frame_incognito": [192, 192, 192],
+      "frame_incognito_inactive": [168, 168, 168],
+      "background_tab": [192, 192, 192],
+      "background_tab_inactive": [192, 192, 192],
+      "background_tab_incognito": [192, 192, 192],
+      "background_tab_incognito_inactive": [192, 192, 192],
+      "tab_background_text": [0, 0, 0],
+      "tab_text": [0, 0, 0],
+      "bookmark_text": [0, 0, 128],
+      "button_background": [192, 192, 192],
+      "control_background": [192, 192, 192],
+      "toolbar": [192, 192, 192],
+      "toolbar_text": [0, 0, 0],
+      "toolbar_button_icon": [0, 0, 0],
+      "omnibox_background": [255, 255, 255],
+      "omnibox_text": [0, 0, 0],
+      "omnibox_highlight": [0, 0, 128],
+      "omnibox_highlight_text": [255, 255, 255],
+      "ntp_background": [192, 192, 192],
+      "ntp_text": [0, 0, 0],
+      "ntp_link": [0, 0, 128],
+      "ntp_section": [192, 192, 192],
+      "sidebar": [192, 192, 192],
+      "sidebar_text": [0, 0, 0],
+      "sidebar_highlight": [0, 0, 128],
+      "sidebar_highlight_text": [255, 255, 255]
+    },
+    "tints": {
+      "buttons": [0.66, 1.0, 0.5],
+      "frame_inactive": [0.0, 0.0, 0.66],
+      "background_tab": [0.0, 0.0, 0.0]
+    }
+  }
+}

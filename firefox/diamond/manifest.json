@@ -5,6 +5,11 @@
   "author": "Gustin Johnson",
   "homepage_url": "https://gitlab.zarquon.space/meganerd/neo-mosaic",
   "description": "NCSA Mosaic-inspired retro theme — brings back the classic 1993 Motif/Windows 3.1 grey chrome and geometric diamond logo.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "neo-mosaic@zarquon.space"
+    }
+  },
   "icons": {
     "16": "icon-16.png",
     "32": "icon-32.png",

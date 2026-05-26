@@ -55,12 +55,6 @@
       "ntp_text": "#000000",
       "ntp_card_background": "#D4D4D4",
       "ntp_card_text": "#000000"
-    },
-    "properties": {
-      "additional_backgrounds": [],
-      "content_color": "#000000",
-      "content_color_light": "#666666",
-      "ntp_card_background": "#D4D4D4"
     }
   }
 }

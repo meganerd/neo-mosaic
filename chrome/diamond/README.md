@@ -10,7 +10,7 @@
 ## Packaging
 
 ```bash
-cd chrome/
+cd chrome/diamond/
 zip -r ../mosaic-chrome-theme.zip manifest.json mosaic-header.png icon-*.png
 ```
 

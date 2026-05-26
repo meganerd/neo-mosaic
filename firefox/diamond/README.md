@@ -17,7 +17,7 @@ Packaged as a static theme. To install:
 ## Building
 
 ```bash
-cd firefox/
+cd firefox/diamond/
 zip -r ../mosaic-theme.xpi manifest.json mosaic-header.png icon-*.png
 ```
 

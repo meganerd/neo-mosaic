@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Mosaic Retro Theme",
+  "version": "1.0",
+  "description": "NCSA Mosaic-inspired retro look for Firefox",
+  "theme": {
+    "images": {
+      "theme_frame": "mosaic-header.png"
+    },
+    "colors": {
+      "frame": "#C0C0C0",
+      "tab_background_text": "#000000",
+      "toolbar": "#C0C0C0",
+      "bookmark_text": "#000080",
+      "toolbar_field": "#FFFFFF",
+      "toolbar_field_text": "#000000",
+      "tab_line": "#000080",
+      "popup": "#C0C0C0",
+      "popup_text": "#000000",
+      "sidebar": "#C0C0C0",
+      "sidebar_text": "#000000",
+      "ntp_background": "#C0C0C0",
+      "ntp_text": "#000000"
+    }
+  }
+}

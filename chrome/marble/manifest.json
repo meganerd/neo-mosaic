@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "neo-mosaic (Marble)",
+  "version": "1.0.0",
+  "author": "Gustin Johnson",
+  "homepage_url": "https://gitlab.zarquon.space/meganerd/neo-mosaic",
+  "description": "NCSA Mosaic-inspired retro theme — marble variant with classic 90s web stone texture, Motif/Windows 3.1 grey chrome, and geometric diamond logo.",
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "marble-header.png"
+    },
+    "colors": {
+      "frame": [210, 200, 190],
+      "frame_inactive": [184, 176, 168],
+      "frame_incognito": [210, 200, 190],
+      "frame_incognito_inactive": [184, 176, 168],
+      "background_tab": [210, 200, 190],
+      "background_tab_inactive": [210, 200, 190],
+      "background_tab_incognito": [210, 200, 190],
+      "background_tab_incognito_inactive": [210, 200, 190],
+      "tab_background_text": [0, 0, 0],
+      "tab_text": [0, 0, 0],
+      "bookmark_text": [0, 0, 128],
+      "button_background": [210, 200, 190],
+      "control_background": [210, 200, 190],
+      "toolbar": [210, 200, 190],
+      "toolbar_text": [0, 0, 0],
+      "toolbar_button_icon": [0, 0, 0],
+      "omnibox_background": [240, 234, 224],
+      "omnibox_text": [0, 0, 0],
+      "omnibox_highlight": [0, 0, 128],
+      "omnibox_highlight_text": [255, 255, 255],
+      "ntp_background": [232, 224, 214],
+      "ntp_text": [0, 0, 0],
+      "ntp_link": [0, 0, 128],
+      "ntp_section": [210, 200, 190],
+      "sidebar": [210, 200, 190],
+      "sidebar_text": [0, 0, 0],
+      "sidebar_highlight": [0, 0, 128],
+      "sidebar_highlight_text": [255, 255, 255]
+    },
+    "tints": {
+      "buttons": [0.66, 1.0, 0.5],
+      "frame_inactive": [0.0, 0.0, 0.66],
+      "background_tab": [0.0, 0.0, 0.0]
+    }
+  }
+}

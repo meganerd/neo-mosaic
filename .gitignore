@@ -4,3 +4,4 @@
 .DS_Store
 neo-mosaic-firefox-diamond-test.xpi
 neo-mosaic-firefox-minimal.xpi
+__pycache__/

@@ -16,21 +16,21 @@
       "theme": {
         "dark": {
           "gx_accent": {
-            "h": 260,
-            "s": 70,
-            "l": 65
+            "h": 250,
+            "s": 62,
+            "l": 55
           },
           "gx_secondary_base": {
-            "h": 260,
+            "h": 250,
             "s": 30,
-            "l": 8
+            "l": 10
           }
         },
         "light": {
           "gx_accent": {
-            "h": 260,
-            "s": 55,
-            "l": 35
+            "h": 250,
+            "s": 62,
+            "l": 34
           },
           "gx_secondary_base": {
             "h": 0,

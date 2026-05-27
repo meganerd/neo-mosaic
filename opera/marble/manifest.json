@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "neo-mosaic (Marble)",
   "version": "1.0.0",
-  "description": "NCSA Mosaic-inspired retro theme — marble variant with classic 90s web stone texture, Motif/Windows 3.1 grey chrome, and geometric diamond logo.",
+  "description": "NCSA Mosaic-inspired retro theme — marble variant with cool blue-grey stone texture, raised Motif/Windows 3.1 chrome, and geometric diamond logo.",
   "developer": {
     "name": "Gustin Johnson",
     "url": "https://gitlab.zarquon.space/meganerd/neo-mosaic"
@@ -16,14 +16,14 @@
       "theme": {
         "dark": {
           "gx_accent": {
-            "h": 240,
-            "s": 100,
-            "l": 63
+            "h": 220,
+            "s": 80,
+            "l": 65
           },
           "gx_secondary_base": {
-            "h": 30,
+            "h": 220,
             "s": 10,
-            "l": 12
+            "l": 18
           }
         },
         "light": {
@@ -33,22 +33,22 @@
             "l": 25
           },
           "gx_secondary_base": {
-            "h": 30,
-            "s": 10,
-            "l": 68
+            "h": 220,
+            "s": 5,
+            "l": 92
           }
         }
       },
       "wallpaper": {
         "dark": {
           "image": "wallpaper/dark.png",
-          "text_color": "#C8BEA8",
-          "text_shadow": "#2C2824"
+          "text_color": "#D0D4DC",
+          "text_shadow": "#181A1E"
         },
         "light": {
           "image": "wallpaper/light.png",
           "text_color": "#000000",
-          "text_shadow": "#C0B8A8"
+          "text_shadow": "#C8CCD4"
         }
       }
     }

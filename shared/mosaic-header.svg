@@ -1,23 +1,155 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 200" width="3000" height="200">
   <defs>
-    <linearGradient id="headerGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#D4D4D4"/>
-      <stop offset="40%" stop-color="#C0C0C0"/>
-      <stop offset="100%" stop-color="#A8A8A8"/>
+    <!-- 90s web texture: fine grain/noise pattern -->
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="2" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        0.33  0     0     0   0.65
+        0     0.33  0     0   0.63
+        0     0     0.33  0   0.66
+        0     0     0     0.35 0" in="noise" result="coloredNoise"/>
+      <feComposite operator="in" in="coloredNoise" in2="SourceGraphic"/>
+      <feBlend mode="multiply" in="coloredNoise" in2="SourceGraphic"/>
+    </filter>
+
+    <!-- Subtle gradient overlay for depth -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D0D0D0"/>
+      <stop offset="50%" stop-color="#C8C8C8"/>
+      <stop offset="100%" stop-color="#B8B8B8"/>
+    </linearGradient>
+
+    <!-- Diamond logo gradient -->
+    <linearGradient id="diamondTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4466DD"/>
+      <stop offset="40%" stop-color="#2244AA"/>
+      <stop offset="100%" stop-color="#112266"/>
+    </linearGradient>
+    <linearGradient id="diamondRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#44AA44"/>
+      <stop offset="40%" stop-color="#228822"/>
+      <stop offset="100%" stop-color="#115511"/>
+    </linearGradient>
+    <linearGradient id="diamondBottom" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DD4444"/>
+      <stop offset="40%" stop-color="#AA2222"/>
+      <stop offset="100%" stop-color="#661111"/>
+    </linearGradient>
+    <linearGradient id="diamondLeft" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DDDD44"/>
+      <stop offset="40%" stop-color="#AAAA22"/>
+      <stop offset="100%" stop-color="#666611"/>
+    </linearGradient>
+
+    <!-- Motif-style bevel -->
+    <linearGradient id="bevelTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#A0A0A0"/>
+    </linearGradient>
+    <linearGradient id="bevelBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#808080"/>
+      <stop offset="100%" stop-color="#C0C0C0"/>
+    </linearGradient>
+
+    <!-- Header title bar gradient -->
+    <linearGradient id="titleBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000080"/>
+      <stop offset="100%" stop-color="#000060"/>
     </linearGradient>
   </defs>
-  <rect width="3000" height="200" fill="url(#headerGrad)"/>
-  <rect width="3000" height="2" fill="#DCDCDC"/>
-  <g transform="translate(40, 30) scale(1.6)">
-    <path fill="#B84B16" d="M 18.5 37 C 17.7 36.9 3.4 45 3.4 45 S 26.4 49.8 59.8 59.8 C 59.8 59.8 66.5 50.4 71.1 45.2 C 72.2 44.5 53.1 40.9 18.5 37 Z"/>
-    <path fill="#005953" d="M -4.3 36 C 7 34.1 18.7 36.3 18.7 36.3 S -10 43.3 -22 53.8 C -22 53.8 -36.6 49.4 -47.3 48.3 C -50.6 48.2 -15.5 37.9 -4.3 36 Z"/>
-    <path fill="#B2BB1E" d="M 33.1 65.2 C 33.1 65.2 43.9 68.1 58.9 73.1 C 58.9 73.1 49.4 87.1 46 93.8 C 46 93.8 36.5 88.3 18.6 80.4 C 18.6 80.4 22.5 76.4 33.1 65.2 Z"/>
-    <path fill="#C5A901" d="M -1.1 67.5 C -1.1 67.5 6.1 62.4 16.1 56.8 C 16.1 56.8 27.6 59.1 44.4 64.1 L 29.3 78.6 C 29.3 78.6 20.5 74.9 13 72.2 C 5.1 69.6 -1.1 67.5 -1.1 67.5 Z"/>
-    <path fill="#2B2B2B" d="M -0.8 45.4 L -1.3 45.7 L -13 45.9 L -13.3 45.5 L -11.2 34.6 L -9.8 27.2 L -6.8 12.4 L -11.4 34.4 L -16.5 45.4 L -17 45.7 L -29.3 45.9 L -29.7 45.5 L -30.1 37.5 L -31.3 12.5 L -32.9 19 L -36.6 33.5 L -40.6 49.9 L -41 50.2 C -45.6 50.2 -46.8 50.3 -51 50.4 L -51.7 50.4 L -48 37 L -42.8 26 L -34.9 3.2 L -34.5 2.8 C -26.9 2.8 -25.1 2.8 -17.8 2.6 L -17.4 3 L -17.1 12.6 L -16.9 17 L -16.3 28.8 L -8.6 12.4 C -7.6 10.4 -4.6 3.9 -4.2 3.1 L -3.8 2.7 C 3.3 2.7 5.1 2.7 12.7 2.5 L 13 2.9 L 10.7 16.5 L -0.8 45.4 Z"/>
+
+  <!-- Main background with 90s texture -->
+  <rect width="3000" height="200" fill="url(#bgGrad)"/>
+  <rect width="3000" height="200" fill="url(#bgGrad)" filter="url(#noise)" opacity="0.7"/>
+
+  <!-- Top bevel highlight -->
+  <rect width="3000" height="2" fill="url(#bevelTop)"/>
+  <!-- Bottom bevel shadow -->
+  <rect y="196" width="3000" height="4" fill="url(#bevelBottom)"/>
+
+  <!-- Dark title bar band -->
+  <rect y="0" width="3000" height="20" fill="url(#titleBar)"/>
+  <!-- Title bar text -->
+  <text x="10" y="14" font-family="'MS Sans Serif', 'Helvetica', Arial, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold">NCSA Mosaic - Welcome!</text>
+  <!-- Title bar buttons -->
+  <rect x="2940" y="3" width="14" height="14" fill="#C0C0C0" stroke="#000000" stroke-width="1"/>
+  <rect x="2960" y="3" width="14" height="14" fill="#C0C0C0" stroke="#000000" stroke-width="1"/>
+  <rect x="2980" y="3" width="14" height="14" fill="#C0C0C0" stroke="#000000" stroke-width="1"/>
+
+  <!-- Menu bar -->
+  <rect y="20" width="3000" height="22" fill="#C0C0C0"/>
+  <text x="8" y="35" font-family="'MS Sans Serif', 'Helvetica', Arial, sans-serif" font-size="12" fill="#000000">File  Edit  Options  Navigate  Annotate  Help</text>
+
+  <!-- Toolbar area -->
+  <rect y="42" width="3000" height="24" fill="#D4D4D4"/>
+  <!-- Toolbar buttons -->
+  <g fill="#C0C0C0" stroke="#808080" stroke-width="0.5">
+    <rect x="4" y="44" width="22" height="20" rx="0"/>
+    <rect x="28" y="44" width="22" height="20" rx="0"/>
+    <rect x="52" y="44" width="22" height="20" rx="0"/>
+    <rect x="76" y="44" width="22" height="20" rx="0"/>
+    <rect x="100" y="44" width="22" height="20" rx="0"/>
+    <rect x="124" y="44" width="22" height="20" rx="0"/>
+    <rect x="148" y="44" width="22" height="20" rx="0"/>
   </g>
-  <text x="300" y="120" font-family="'Courier New', 'Andale Mono', monospace" font-size="28" font-weight="bold" fill="#2B2B2B" letter-spacing="4">neo-mosaic</text>
-  <text x="300" y="146" font-family="'Courier New', 'Andale Mono', monospace" font-size="14" fill="#666666" letter-spacing="2">MOSAIC RETRO THEME</text>
-  <rect x="560" y="95" width="600" height="28" rx="2" fill="#FFFFFF" stroke="#999999" stroke-width="1"/>
-  <text x="570" y="114" font-family="'Courier New', monospace" font-size="13" fill="#000080">http://www.ncsa.uiuc.edu/</text>
-  <rect width="3000" height="1" y="198" fill="#808080"/>
+  <!-- URL bar -->
+  <rect x="180" y="45" width="600" height="18" rx="0" fill="#FFFFFF" stroke="#808080" stroke-width="1"/>
+  <text x="185" y="57" font-family="'Courier New', monospace" font-size="11" fill="#000080">http://www.ncsa.uiuc.edu/</text>
+
+  <!-- Content area background (90s texture) -->
+  <rect y="66" width="3000" height="134" fill="#C0C0C0"/>
+  <rect y="66" width="3000" height="134" fill="#C0C0C0" filter="url(#noise)" opacity="0.5"/>
+
+  <!-- NCSA Mosaic Diamond Logo (top-left) -->
+  <g transform="translate(30, 72)">
+    <!-- Logo shadow -->
+    <polygon points="55,106 110,52 55,106 0,52" fill="#000000" opacity="0.2"/>
+    <!-- Diamond: 4 triangles forming the NCSA Mosaic logo -->
+    <!-- Top (blue) -->
+    <polygon points="55,4 106,55 55,55" fill="url(#diamondTop)"/>
+    <!-- Right (green) -->
+    <polygon points="106,55 55,106 55,55" fill="url(#diamondRight)"/>
+    <!-- Bottom (red) -->
+    <polygon points="4,55 55,106 55,55" fill="url(#diamondBottom)"/>
+    <!-- Left (yellow) -->
+    <polygon points="55,4 4,55 55,55" fill="url(#diamondLeft)"/>
+    <!-- Outer border -->
+    <polygon points="55,0 110,55 55,110 0,55" fill="none" stroke="#000000" stroke-width="1.5"/>
+    <!-- Inner diamond -->
+    <polygon points="55,22 88,55 55,88 22,55" fill="#FFFFFF" opacity="0.15"/>
+    <!-- Highlight sheen -->
+    <polygon points="55,4 106,55 80,55 55,30" fill="#FFFFFF" opacity="0.12"/>
+  </g>
+
+  <!-- Welcome heading text -->
+  <text x="195" y="100" font-family="'Times New Roman', 'Georgia', serif" font-size="28" font-weight="bold" fill="#000080">Welcome to NCSA Mosaic</text>
+  <text x="195" y="122" font-family="'Helvetica', Arial, sans-serif" font-size="14" fill="#000000">A global hypermedia browser for the Internet.</text>
+
+  <!-- Navigation links -->
+  <g font-family="'Helvetica', Arial, sans-serif" font-size="13" fill="#0000FF" text-decoration="underline">
+    <text x="195" y="148">Getting Started</text>
+    <text x="195" y="168">What's New!</text>
+    <text x="195" y="188">Frequently Asked Questions</text>
+  </g>
+
+  <!-- Right-side decorative element: globe graphic -->
+  <g transform="translate(2800, 80)" opacity="0.3">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#666666" stroke-width="1"/>
+    <ellipse cx="50" cy="50" rx="10" ry="45" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <ellipse cx="50" cy="50" rx="25" ry="45" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <ellipse cx="50" cy="50" rx="35" ry="45" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <ellipse cx="50" cy="50" rx="45" ry="10" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <ellipse cx="50" cy="50" rx="45" ry="25" fill="none" stroke="#666666" stroke-width="0.5"/>
+    <ellipse cx="50" cy="50" rx="45" ry="35" fill="none" stroke="#666666" stroke-width="0.5"/>
+  </g>
+
+  <!-- Status bar at bottom -->
+  <rect y="194" width="3000" height="6" fill="#C0C0C0"/>
+  <rect y="194" width="3000" height="1" fill="#808080"/>
+  <rect y="199" width="3000" height="1" fill="#FFFFFF"/>
+
+  <!-- Mosaic logo watermark (right side, subtle) -->
+  <g transform="translate(2650, 130)" opacity="0.08">
+    <polygon points="30,0 60,30 30,60 0,30" fill="none" stroke="#000080" stroke-width="2"/>
+  </g>
 </svg>

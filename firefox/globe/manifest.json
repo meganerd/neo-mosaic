@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Gustin Johnson",
   "homepage_url": "https://gitlab.zarquon.space/meganerd/neo-mosaic",
-  "description": "NCSA Mosaic-inspired retro theme (spinning globe variant). Classic 1993 grey chrome with the iconic animated globe throbber logo.",
+  "description": "NCSA Mosaic-inspired retro theme (globe variant). Classic 1993 grey chrome with the iconic Mosaic 'M' globe logo.",
   "browser_specific_settings": {
     "gecko": {
       "id": "neo-mosaic-globe@zarquon.space"

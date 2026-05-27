@@ -1,77 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 556" width="900" height="556">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
   <defs>
-    <!-- Globe body gradient -->
-    <radialGradient id="globeGrad" cx="40%" cy="35%" r="50%">
-      <stop offset="0%" stop-color="#4A3DB8"/>
-      <stop offset="30%" stop-color="#3026A0"/>
-      <stop offset="60%" stop-color="#221D6E"/>
-      <stop offset="85%" stop-color="#1A1855"/>
-      <stop offset="100%" stop-color="#121040"/>
+    <radialGradient id="g" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3C2FA0"/>
+      <stop offset="35%" stop-color="#241893"/>
+      <stop offset="65%" stop-color="#190E6A"/>
+      <stop offset="85%" stop-color="#140A50"/>
+      <stop offset="100%" stop-color="#0E0738"/>
     </radialGradient>
-    <!-- Highlight/shine -->
-    <radialGradient id="globeShine" cx="35%" cy="30%" r="40%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    <radialGradient id="s" cx="32%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
-    <!-- Grid line color -->
-    <linearGradient id="gridGlow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#888888"/>
-      <stop offset="50%" stop-color="#AAAAAA"/>
-      <stop offset="100%" stop-color="#666666"/>
-    </linearGradient>
   </defs>
-
-  <!-- Background - transparent -->
-
-  <!-- Globe shadow -->
-  <ellipse cx="460" cy="440" rx="200" ry="25" fill="#000000" opacity="0.15"/>
-
-  <!-- Main globe sphere -->
-  <circle cx="440" cy="300" r="200" fill="url(#globeGrad)" stroke="#3A3090" stroke-width="2"/>
-
-  <!-- Longitude lines (vertical) -->
-  <g fill="none" stroke="#8A8A9A" stroke-width="1.2" opacity="0.5">
-    <ellipse cx="440" cy="300" rx="30" ry="200"/>
-    <ellipse cx="440" cy="300" rx="85" ry="200"/>
-    <ellipse cx="440" cy="300" rx="140" ry="200"/>
-    <ellipse cx="440" cy="300" rx="175" ry="200"/>
-    <!-- Back side longitude (darker) -->
-    <ellipse cx="440" cy="300" rx="170" ry="200" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="130" ry="200" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="80" ry="200" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="25" ry="200" stroke="#5A5A7A" stroke-dasharray="3,5"/>
+  <g transform="translate(200, 240)">
+    <!-- Top diamond/globe -->
+    <path d="M 0,-230 C 20,-230 40,-225 55,-215 C 70,-205 80,-190 82,-175 C 84,-160 78,-148 66,-140 C 48,-128 22,-124 -5,-124 C -32,-124 -58,-128 -76,-140 C -88,-148 -94,-160 -92,-175 C -90,-190 -80,-205 -65,-215 C -50,-225 -30,-230 -10,-230 C -5,-230 -2,-230 0,-230 Z" fill="url(#g)" stroke="#0E0738" stroke-width="1"/>
+    <!-- Right M stroke -->
+    <path d="M 30,-120 C 48,-90 62,-55 70,-20 C 78,15 80,48 76,76 C 72,104 62,124 48,134 C 34,144 18,144 6,134 C -6,124 -14,104 -18,76 C -22,48 -20,15 -14,-20 C -8,-55 6,-90 24,-118 Z" fill="url(#g)" stroke="#0E0738" stroke-width="1"/>
+    <!-- Left M stroke / base -->
+    <path d="M -70,60 C -58,68 -48,80 -40,96 C -32,112 -28,130 -30,148 C -32,166 -38,180 -48,188 C -58,196 -70,196 -80,188 C -90,180 -96,166 -98,148 C -100,130 -96,112 -88,96 C -80,80 -68,68 -70,60 Z" fill="url(#g)" stroke="#0E0738" stroke-width="1"/>
+    <!-- Shine -->
+    <path d="M 0,-230 C 20,-230 40,-225 55,-215 C 70,-205 80,-190 82,-175 C 84,-160 78,-148 66,-140 C 48,-128 22,-124 -5,-124 C -32,-124 -58,-128 -76,-140 C -88,-148 -94,-160 -92,-175 C -90,-190 -80,-205 -65,-215 C -50,-225 -30,-230 -10,-230 C -5,-230 -2,-230 0,-230 Z" fill="url(#s)"/>
   </g>
-
-  <!-- Latitude lines (horizontal) -->
-  <g fill="none" stroke="#8A8A9A" stroke-width="1.2" opacity="0.5">
-    <ellipse cx="440" cy="300" rx="200" ry="15"/>
-    <ellipse cx="440" cy="300" rx="200" ry="50"/>
-    <ellipse cx="440" cy="300" rx="200" ry="90"/>
-    <ellipse cx="440" cy="300" rx="200" ry="140"/>
-    <ellipse cx="440" cy="300" rx="200" ry="175"/>
-    <!-- Back side latitude (darker, lower hemisphere) -->
-    <ellipse cx="440" cy="300" rx="200" ry="175" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="200" ry="135" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="200" ry="90" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-    <ellipse cx="440" cy="300" rx="200" ry="50" stroke="#5A5A7A" stroke-dasharray="3,5"/>
-  </g>
-
-  <!-- Globe highlight/shine -->
-  <circle cx="440" cy="300" r="200" fill="url(#globeShine)"/>
-
-  <!-- Outer ring / "space pipe" - decorative ring around the globe -->
-  <g transform="translate(440,300)">
-    <!-- Back half of ring -->
-    <ellipse cx="0" cy="0" rx="220" ry="130" fill="none" stroke="#8A7A6A" stroke-width="6" opacity="0.3"
-             stroke-dasharray="350,380" stroke-dashoffset="180"/>
-    <!-- Front half of ring -->
-    <path d="M -220,0 A 220,130 0 0,0 220,0" fill="none" stroke="#B8956A" stroke-width="6"/>
-    <!-- Ring glow effect -->
-    <path d="M -220,0 A 220,130 0 0,0 220,0" fill="none" stroke="#D4B07A" stroke-width="2" opacity="0.5"/>
-  </g>
-
-  <!-- "neo-mosaic" text -->
-  <text x="440" y="520" font-family="'Courier New', 'Andale Mono', monospace" font-size="36" font-weight="bold" fill="#2B2B2B" text-anchor="middle" letter-spacing="6">neo-mosaic</text>
-  <text x="440" y="545" font-family="'Courier New', 'Andale Mono', monospace" font-size="14" fill="#888888" text-anchor="middle" letter-spacing="4">NCSA MOSAIC INSPIRED</text>
 </svg>
